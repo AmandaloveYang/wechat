@@ -11,5 +11,5 @@ WORKDIR /app
 COPY package*.json .
 RUN npm install
 COPY . .
-ENV WECHATY_PUPPET_WECHAT_ENDPOINT=/usr/bin/google-chrome
+# ENV WECHATY_PUPPET_WECHAT_ENDPOINT=/usr/bin/google-chrome
 CMD xvfb-run --server-args="-screen 0 1024x768x24" npm run dev
